@@ -156,7 +156,7 @@ def split_tier(prefix, train_percentage, shuffle=False):
 
 if __name__ == '__main__':
 
-    download_prefix = os.path.join("download", "squad")
+    download_prefix = os.path.join("squad")
     data_prefix = os.path.join("data", "squad")
 
     train_filename = "train-v1.1.json"
