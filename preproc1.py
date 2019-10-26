@@ -3,6 +3,7 @@ import argparse
 import json
 import linecache
 import nltk
+nltk.download('punkt')
 import numpy as np
 import os
 import sys
