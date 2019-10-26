@@ -157,7 +157,7 @@ def split_tier(prefix, train_percentage, shuffle=False):
 if __name__ == '__main__':
 
     download_prefix = os.path.join("squad")
-    data_prefix = os.path.join("data", "squad")
+    data_prefix = os.path.join("data")
 
     train_filename = "train-v1.1.json"
     dev_filename = "dev-v1.1.json"
@@ -169,25 +169,25 @@ if __name__ == '__main__':
     print("Splitting the dataset into train and validation")
     split_tier(data_prefix, 0.95, shuffle=True)
 
-    print("Processed {} questions and {} answers in train".format(train_num_questions, train_num_answers))
-    
-    
-    
-    os.rename('data\\squad\\train.spans','data\\squad\\ntrain.spans')   
-    with open('data\\squad\\ntrain.spans','r') as file:
-        l=file.readlines()
-        
-    with open('data\\squad\\train.spans','w') as file:
-        for i in range(len(l)):
-            line=l[i]
-            line=line[2:-6]
-            file.write(line+'\n')
-    
-    os.rename('data\\squad\\val.spans','data\\squad\\nval.spans')            
-    with open('data\\squad\\nval.spans','r') as file:
-        l=file.readlines()
-    with open('data\\squad\\val.spans','w') as file:
-        for i in range(len(l)):
-            line=l[i]
-            line=line[2:-6]
-            file.write(line+'\n')      
+#    print("Processed {} questions and {} answers in train".format(train_num_questions, train_num_answers))
+#    
+#    
+#    
+#    os.rename('data\\squad\\train.spans','data\\squad\\ntrain.spans')   
+#    with open('data\\squad\\ntrain.spans','r') as file:
+#        l=file.readlines()
+#        
+#    with open('data\\squad\\train.spans','w') as file:
+#        for i in range(len(l)):
+#            line=l[i]
+#            line=line[2:-6]
+#            file.write(line+'\n')
+#    
+#    os.rename('data\\squad\\val.spans','data\\squad\\nval.spans')            
+#    with open('data\\squad\\nval.spans','r') as file:
+#        l=file.readlines()
+#    with open('data\\squad\\val.spans','w') as file:
+#        for i in range(len(l)):
+#            line=l[i]
+#            line=line[2:-6]
+#            file.write(line+'\n')      
